@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>fr.fastconnect.factory.tibco.bw.maven</groupId>
+		<artifactId>archetypes</artifactId>
+		<version>2.4.2-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>archetype-bw-mavenizer</artifactId>
+	<packaging>maven-archetype</packaging>
+	
+	<name>BWMaven TIBCO BusinessWorks project mavenizer</name>
+	<description>
+		This archetype will create a POM that inherits from FC TIBCO Factory
+		parent POM *OR* from the client's root POM created with
+		'archetype-client-root-project' archetype.
+
+		This POM will be the Maven configuration for the existing TIBCO BW
+		project.
+		
+		1) you want to use the default FC TIBCO Factory parent, then replace the
+		'rootProjectGroupId', 'rootProjectArtifactId' &amp; 'rootProjectVersion'
+		by the content of 'fcFactoryGroupId', 'fcFactoryArtifactId' &amp;
+		'fcFactoryVersion' respectively.
+		
+		2) you want to use your own parent created with
+		'archetype-client-root-project', then replace 'rootProjectGroupId',
+		'rootProjectArtifactId' &amp; 'rootProjectVersion' by the values of your
+		own parent (ex: 'com.company.project', 'project-root', '1.0.0').
+	</description>
+
+	<properties>
+		<maven.site.skip>true</maven.site.skip>
+		<maven.site.deploy.skip>true</maven.site.deploy.skip>
+		
+		<bw.maven.plugin.version>${project.version}</bw.maven.plugin.version>
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.archetype</groupId>
+					<artifactId>maven-archetype-plugin</artifactId>
+					<version>2.2</version>
+					<executions>
+						<execution>
+							<id>default-cli</id>
+							<goals>
+								<goal>generate</goal>
+							</goals>
+							<inherited>false</inherited>
+							<configuration>
+								<goals>antrun:run</goals>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

@@ -1,0 +1,51 @@
+#*
+ * (C) Copyright 2011-2015 FastConnect SAS
+ * (http://www.fastconnect.fr/) and others.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *#
+#set($h1 = '#')
+#set($h2 = '##')
+#set($h3 = '###')
+#set($h4 = '####')
+
+$h4 Advanced Configuration Management
+
+[![Advanced Configuration Management](images/banner-configuration.png)](./phases/packaging.html)
+	
+An advanced configuration management is introduced during all the application 
+lifecycle, from development to deployment through packaging.
+
+$h4 TIBCO Designer aliases
+
+[![TIBCO Designer aliases](images/banner-aliases.png)](./phases/development.html)
+	
+BWMaven will automatically adds the aliases in TIBCO Designer based on
+dependencies declared in the POM file of the project.
+
+---
+
+$h2 Quick starter guide
+
+To start using this plugin, read following pages:
+
+  * [Installation](${rootSiteDisplayURL}/installation.html)
+  * [Configuration](${rootSiteDisplayURL}/configuration.html)
+  * [Mavenization](./mavenization.html)
+
+$h2 Plugin information
+
+  * [Usage page](./usage.html)
+  * [FAQ](./faq.html)
+  * [Issue tracker](./issue-tracking.html)
+  * [Source repository](./source-repository.html)
