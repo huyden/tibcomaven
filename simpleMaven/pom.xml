@@ -6,7 +6,7 @@
 
 	<groupId>huy.test</groupId>
 	<artifactId>testArtifact</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>pom</packaging>
 
 	<name>Test</name>
@@ -14,5 +14,11 @@
 	<description>
 		BWMaven, application lifecycle management for TIBCO BusinessWorks projects
 	</description>
-
+<distributionManagement>
+      <repository>
+         <id>Archiva</id>
+         <name>Archiva</name>
+         <url>http://localhost:8080/repository/internal/</url>
+      </repository>
+   </distributionManagement>
 </project>
